@@ -35,6 +35,7 @@ Run the simulator with:
 
 Example:
     ```./sim 256 32 4 gcc_trace.txt```
+
 Where:
 
 ROB_SIZE = number of entries in the reorder buffer
@@ -49,20 +50,31 @@ TRACE_FILE = instruction trace file
 The simulator prints:
 
 Per-instruction timeline, showing each stage and its cycle count:
+    
     <seq_no> fu{<op>} src{<src1>,<src2>} dst{<dst>} FE{start,lat} DE{start,lat} ...
 
 Final statistics:
 
-/# === Simulator Command =========
-/# ./sim 256 32 4 gcc_trace.txt
-/# === Processor Configuration ===
-/# ROB_SIZE = 256
-/# IQ_SIZE  = 32
-/# WIDTH    = 4
-/# === Simulation Results ========
-/# Dynamic Instruction Count    = 100000
-/# Cycles                       = 50000
-/# Instructions Per Cycle (IPC) = 2.00
+ === Simulator Command =========
+
+ ./sim 256 32 4 gcc_trace.txt
+
+ === Processor Configuration ===
+
+ ROB_SIZE = 256
+
+ IQ_SIZE  = 32
+
+ WIDTH    = 4
+
+ === Simulation Results ========
+
+ Dynamic Instruction Count    = 100000
+
+ Cycles                       = 50000
+
+ Instructions Per Cycle (IPC) = 2.00
+
 ## File Overview
 
 sim_proc.cc – Main simulator source file, implements pipeline stages, instruction timing, and statistics.
